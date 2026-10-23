@@ -1,5 +1,9 @@
 # product-trend-radar 📈
 
+[![tests](https://github.com/FiRaWiN/product-trend-radar/actions/workflows/tests.yml/badge.svg)](https://github.com/FiRaWiN/product-trend-radar/actions/workflows/tests.yml)
+[![Python](https://img.shields.io/badge/python-3.11%2B-blue)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+
 **Cross-border e-commerce product trend monitoring** — pluggable data sources,
 trend scoring, SQLite history, Markdown reports, and instant Feishu (Lark)
 alerts when a product heats up.
