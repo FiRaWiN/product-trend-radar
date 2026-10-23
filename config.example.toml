@@ -1,0 +1,27 @@
+# product-trend-radar configuration example
+# copy to config.toml and edit
+
+db_path = "data/radar.db"
+
+[[sources]]
+name = "demo"
+type = "demo"                # "demo" (synthetic, no network) or "amazon"
+keywords = ["shampoo", "hair mask"]
+max_results = 10
+
+# [[sources]]
+# name = "amazon"
+# type = "amazon"             # needs: pip install requests beautifulsoup4
+# keywords = ["biotin shampoo"]
+# max_results = 15
+
+[notify]
+console = true
+feishu_webhook = ""          # e.g. https://open.feishu.cn/open-apis/bot/v2/hook/xxxx
+feishu_min_score = 75.0      # only push products scoring above this
+
+[weights]
+review_velocity = 0.4
+rating = 0.3
+price_stability = 0.15
+rank_improvement = 0.15

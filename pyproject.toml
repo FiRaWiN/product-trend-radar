@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "product-trend-radar"
+version = "0.1.0"
+description = "Cross-border e-commerce product trend monitoring: pluggable sources, trend scoring, SQLite history, Feishu alerts, Markdown reports."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Attila" }]
+keywords = ["e-commerce", "cross-border", "trend", "monitoring", "amazon", "feishu"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Office/Business :: Financial",
+]
+
+[project.scripts]
+radar = "radar.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["radar*"]
